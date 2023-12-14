@@ -1,0 +1,55 @@
+version: '3'
+services:
+  config-server:
+    image: saadrahmanwarsi/configserveroc:1.0.0
+    expose:
+      - 9296
+    ports: 
+      - 9296:9296
+    networks:
+      - octranspo1
+  service-registry:
+    image: saadrahmanwarsi/serviceregistryoc:1.0.0
+    expose:
+      - 8761
+    ports: 
+      - 8761:8761
+    networks:
+      - octranspo1
+  cloud-gateway:
+    image: saadrahmanwarsi/cloudgatewayoc:1.0.0
+    expose:
+      - 9391
+    ports:
+      - 9391:9391
+    networks:
+      - octranspo1
+    depends_on:
+      - config-server
+      - service-registry
+  communicate-with-oc:
+    image: saadrahmanwarsi/communicatewithoc:1.0.0
+    expose:
+      - 9057
+    ports: 
+      - 9057:9057
+    networks:
+      - octranspo1
+    depends_on:
+      - config-server
+      - service-registry
+  time-of-bus-oc:
+    image: saadrahmanwarsi/timeofbusoc:1.0.0
+    expose:
+      - 9051
+    ports: 
+      - 9051:9051
+    networks:
+      - octranspo1
+    depends_on:
+      - config-server
+      - service-registry
+networks:
+  octranspo1:
+    driver: bridge 
+      
