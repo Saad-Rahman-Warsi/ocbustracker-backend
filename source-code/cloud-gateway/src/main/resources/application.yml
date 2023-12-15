@@ -1,0 +1,40 @@
+server:
+  port: 9391
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://registry-service:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    #kubernetes:
+     # reload:
+      #  enabled: true
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: CommunicatewithocApplication
+          uri: lb://CommunicatewithocApplication
+          predicates:
+            - Path=/commoc/**
+        - id: timeofbus
+          uri: lb://timeofbus
+          predicates:
+            - Path=/tibua/**
+
+

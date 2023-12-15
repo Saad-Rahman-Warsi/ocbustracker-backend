@@ -1,0 +1,25 @@
+server:
+  port: 9296
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://registry-service:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    #kubernetes:
+     # reload:
+      #  enabled: true
+    config:
+      server:
+        git:
+          uri: https://github.com/Saad-Rahman-Warsi/config-server
+          clone-on-start: true

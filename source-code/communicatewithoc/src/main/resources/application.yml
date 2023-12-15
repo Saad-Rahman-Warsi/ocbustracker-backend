@@ -1,0 +1,24 @@
+server:
+  port: 9057
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://registry-service:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: CommunicatewithocApplication
+  cloud:
+    #kubernetes:
+     #reload:
+      #  enabled: true
+
+
+
+
+
