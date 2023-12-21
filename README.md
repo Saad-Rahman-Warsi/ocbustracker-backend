@@ -21,4 +21,12 @@ If you want to build your own image locally you should -
 2. IMPORTANT - You should replace image names with your own image names in dockrun.sh and then run the file.
 3. In docker folder select the file and correct the image names
 4. Run the compose
+
+
+If you want to deploy the program locally -
+1. Switch to branch named local.
+2. Download the entire source-code folder.
+3. In Intellij IDEA open the folders (inside source-code folder) like apigateway etc in seprate windows
+4. Run them all simultaneosly
+5. To integrate with frontend  https://github.com/Saad-Rahman-Warsi/ocbustracker/tree/docker-local
  
