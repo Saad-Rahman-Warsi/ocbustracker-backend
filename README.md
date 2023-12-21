@@ -1,4 +1,8 @@
-In order to deploy the program , go to the uberetes foler run the shell script after starting kubernetes 
+In order to deploy the program in kubernetes, the following steps 
+1. start kubernetes (by running minikube start etc)
+2. download the entire kuberetes folder and run the shell script
+3. run command "minikube service apigateway-service"
+4. Note the port number in localhost on which the api gateway runs. 
 
 ALTER
 
