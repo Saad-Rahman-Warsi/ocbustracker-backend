@@ -11,7 +11,7 @@ In order to deploy the program in kubernetes, the following steps
 
 In order to deploy in docker
 1. go to docker folder use run 'docker-compose -f docker-compose.yaml up'.
-2. In order to integrate with front end download and execute  
+2. In order to integrate with front end download and execute  https://github.com/Saad-Rahman-Warsi/ocbustracker/tree/docker-local
 
 In both cases You need not build image because it will be pulled from dockerhub.
 
