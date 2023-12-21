@@ -23,7 +23,7 @@ If you want to build your own image locally you should -
 4. Run the compose
 
 
-If you want to deploy the program locally -
+If you want to deploy the program locally i.e. without docker and kubernetes -
 1. Switch to branch named local.
 2. Download the entire source-code folder.
 3. In Intellij IDEA open the folders (inside source-code folder) like apigateway etc in seprate windows
