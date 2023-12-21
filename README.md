@@ -4,7 +4,8 @@ In order to deploy the program in kubernetes, the following steps
 3. run command "minikube service apigateway-service"
 4. Note the url on which the api gateway runs on localhost.
 5. You can use this url to interact with api-gateway in the backend.
-6. To integrate with frontend
+6. To integrate with frontend follow instructions https://github.com/Saad-Rahman-Warsi/ocbustracker/blob/kubernetes-branch/README.md
+   
 
 ALTER
 
