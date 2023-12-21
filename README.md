@@ -19,6 +19,6 @@ If you want to build your own image locally you should -
 
 1. run mvn package for all microservices
 2. IMPORTANT - You should replace image names with your own image names in dockrun.sh and then run the file.
-3. In docker foler select the file a correct the image names
+3. In docker folder select the file and correct the image names
 4. Run the compose
  
