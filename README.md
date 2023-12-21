@@ -2,7 +2,7 @@ In order to deploy the program in kubernetes, the following steps
 1. start kubernetes (by running minikube start etc)
 2. download the entire kuberetes folder and run the shell script
 3. run command "minikube service apigateway-service"
-4. Note the port number in localhost on which the api gateway runs.
+4. Note the url on which the api gateway runs on localhost.
 5. You can use this url to interact with api-gateway in the backend.
 6. To integrate with frontend
 
